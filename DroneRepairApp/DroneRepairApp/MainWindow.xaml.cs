@@ -8,14 +8,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.Generic;
 
 namespace DroneRepairApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
+        public List<Drone> finishedOrders = new List<Drone>();
+        public Queue<Drone> regularOrders = new Queue<Drone>();
+        public Queue<Drone> expressOrders = new Queue<Drone>();
+
+
         public MainWindow()
         {
             InitializeComponent();

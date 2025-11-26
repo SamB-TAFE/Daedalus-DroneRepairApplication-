@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DroneRepairApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bed03fbf8d9d6d2cb3941682ae41ee2f930f6f78")]
 [assembly: System.Reflection.AssemblyProductAttribute("DroneRepairApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DroneRepairApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

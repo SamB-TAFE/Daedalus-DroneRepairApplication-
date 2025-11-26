@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:DroneRepairApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="656" Width="800">
-    <Grid Height="656" VerticalAlignment="Top">
-        <StatusBar Margin="0,620,0,10" RenderTransformOrigin="0.5,0.5">
+        Title="MainWindow" Height="673" Width="1018">
+    <Grid Height="663" VerticalAlignment="Top">
+        <StatusBar Margin="0,630,0,3" RenderTransformOrigin="0.5,0.5">
             <StatusBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -17,23 +18,56 @@
                 </TransformGroup>
             </StatusBar.RenderTransform>
         </StatusBar>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="701,9,0,0" VerticalAlignment="Top" Height="36" Width="89"/>
-        <Label Content="Regular Queue" HorizontalAlignment="Left" Margin="415,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="415,48,10,357">
+        <Button x:Name="RegFinishButton" Content="Finish Order" HorizontalAlignment="Left" Margin="909,9,0,0" VerticalAlignment="Top" Height="36" Width="89"/>
+        <Label x:Name="RegQLabel" Content="Regular Queue" HorizontalAlignment="Left" Margin="415,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ListView x:Name="RegularListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="415,48,10,373">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Tag" Width="50" DisplayMemberBinding="{Binding Tag}" />
+                    <GridViewColumn Header="Client" Width="100" DisplayMemberBinding="{Binding Client}" />
+                    <GridViewColumn Header="Model" Width="100" DisplayMemberBinding="{Binding Model}" />
+                    <GridViewColumn Header="Repair" Width="223" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Cost" Width="100" DisplayMemberBinding="{Binding Cost}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="701,299,0,0" VerticalAlignment="Top" Height="36" Width="89"/>
-        <Label Content="Express Queue" HorizontalAlignment="Left" Margin="415,299,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="415,338,10,41">
+        <Button x:Name="ExpFinishButton" Content="Finish Order" HorizontalAlignment="Left" Margin="909,323,0,0" VerticalAlignment="Top" Height="36" Width="89"/>
+        <Label x:Name="ExpQLabel" Content="Express Queue" HorizontalAlignment="Left" Margin="415,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ListView x:Name="ExpressListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="415,364,10,41">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Tag" Width="50" DisplayMemberBinding="{Binding Tag}" />
+                    <GridViewColumn Header="Client" Width="100" DisplayMemberBinding="{Binding Client}" />
+                    <GridViewColumn Header="Model" Width="100" DisplayMemberBinding="{Binding Model}" />
+                    <GridViewColumn Header="Repair" Width="223" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Cost" Width="100" DisplayMemberBinding="{Binding Cost}" />
                 </GridView>
             </ListView.View>
         </ListView>
+        <RadioButton x:Name="RegOrderRadio" Content="Regular Order" HorizontalAlignment="Left" Margin="268,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.766,0.136"/>
+        <RadioButton x:Name="ExpOrderRadio" Content="Express Order" HorizontalAlignment="Left" Margin="268,73,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ClientInput" HorizontalAlignment="Left" Margin="93,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <xctk:IntegerUpDown x:Name="TagInput"
+        Width="120"
+        Minimum="100"
+        Maximum="900"
+        Increment="10"
+        Value="0"
+        HorizontalContentAlignment="Center" Margin="94,23,804,608"/>
+        <TextBox x:Name="ModelInput" HorizontalAlignment="Left" Margin="93,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="CostInput" HorizontalAlignment="Left" Margin="93,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="DescriptionInput" HorizontalAlignment="Left" Margin="93,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"
+                 VerticalScrollBarVisibility="Auto"
+                 AcceptsReturn="True"
+                 Width="260" Height="116"/>
+        <Button x:Name="NewOrderButton" Content="New Order" HorizontalAlignment="Left" Margin="268,111,0,0" VerticalAlignment="Top" Height="36" Width="89"/>
+        <Label x:Name="TagLabel" Content="Service Tag" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="78" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="ClientLabel" Content="Client Name" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="26" Width="78" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="ModelLabel" Content="Model Name" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="26" Width="78" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="CostLabel" Content="Cost" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="26" Width="78" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="DescriptionLabel" Content="    Repair&#10;Description" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="58" Width="78" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ListBox x:Name="FinishedListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="36,382,627,126"/>
+        <Label x:Name="FinishedViewLabel" Content="Finished Orders" HorizontalAlignment="Left" Margin="131,346,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="ClearFinishedButton" Content="Pay and Clear" HorizontalAlignment="Left" Margin="153,544,0,0" VerticalAlignment="Top" Height="36" Width="89"/>
     </Grid>
 </Window>

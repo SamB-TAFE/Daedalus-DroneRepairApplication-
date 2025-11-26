@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\30106121\\source\\repos\\DroneRepairApp\\",
+  "WorkspaceRootPath": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|c:\\users\\30106121\\source\\repos\\dronerepairapp\\dronerepairapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|solutionrelative:dronerepairapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|c:\\users\\samue\\documents\\github\\daedalus-dronerepairapplication-\\dronerepairapp\\dronerepairapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|solutionrelative:dronerepairapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|c:\\users\\30106121\\source\\repos\\dronerepairapp\\dronerepairapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|solutionrelative:dronerepairapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|c:\\users\\samue\\documents\\github\\daedalus-dronerepairapplication-\\dronerepairapp\\dronerepairapp\\drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|solutionrelative:dronerepairapp\\drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|c:\\users\\samue\\documents\\github\\daedalus-dronerepairapplication-\\dronerepairapp\\dronerepairapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53A7CFEA-1281-447E-B253-1F91EB81AA81}|DroneRepairApp\\DroneRepairApp.csproj|solutionrelative:dronerepairapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,11 +34,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\30106121\\source\\repos\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "DroneRepairApp\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\30106121\\source\\repos\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml",
               "RelativeToolTip": "DroneRepairApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-20T04:33:11.348Z",
@@ -42,15 +46,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\30106121\\source\\repos\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "DroneRepairApp\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\30106121\\source\\repos\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\DroneRepairApp\\MainWindow.xaml.cs",
               "RelativeToolTip": "DroneRepairApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T04:33:10.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Drone.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\DroneRepairApp\\Drone.cs",
+              "RelativeDocumentMoniker": "DroneRepairApp\\Drone.cs",
+              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\DroneRepairApp\\Drone.cs",
+              "RelativeToolTip": "DroneRepairApp\\Drone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T08:03:45.013Z",
               "EditorCaption": ""
             }
           ]

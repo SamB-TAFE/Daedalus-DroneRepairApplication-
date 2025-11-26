@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "INHvbI5oM28=",
+  "dgSpecHash": "NBbui+cNOZc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\30106121\\source\\repos\\DroneRepairApp\\DroneRepairApp\\DroneRepairApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\samue\\Documents\\GitHub\\Daedalus-DroneRepairApplication-\\DroneRepairApp\\DroneRepairApp\\DroneRepairApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samue\\.nuget\\packages\\extended.wpf.toolkit\\5.0.0\\extended.wpf.toolkit.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
