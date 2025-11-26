@@ -66,7 +66,8 @@ namespace DroneRepairApp
 
         public void SetCost(double serviceCost)
         {
-            this.serviceCost = serviceCost;
+            double twoDecimal = Math.Round(serviceCost, 2);
+            this.serviceCost = twoDecimal;
         }
 
 

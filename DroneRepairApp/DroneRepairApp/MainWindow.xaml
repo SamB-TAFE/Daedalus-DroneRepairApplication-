@@ -6,7 +6,7 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:DroneRepairApp"
         mc:Ignorable="d"
-        Title="Daedalus -Drone Repair-" Height="673" Width="1018">
+        Title="Daedalus -Drone Repair-" Height="673" Width="1018" Icon="/gear.png">
     <Grid Height="663" VerticalAlignment="Top">
         <Border BorderBrush="#FF656565" BorderThickness="1" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="371"/>
 
@@ -70,15 +70,14 @@
                      GroupName="ServiceType"/>
         <TextBox x:Name="ClientInput" HorizontalAlignment="Left" Margin="93,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <xctk:IntegerUpDown x:Name="TagInput"
-        Width="120"
         Minimum="100"
         Maximum="900"
         Increment="10"
         Value="0"
-        HorizontalContentAlignment="Center" Margin="94,23,804,608"/>
+        HorizontalContentAlignment="Center" Margin="94,23,805,608"/>
         <TextBox x:Name="ModelInput" HorizontalAlignment="Left" Margin="93,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="CostInput" HorizontalAlignment="Left" Margin="93,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"
-                 TextChanged="CostInput_TextChanged"/>
+                 LostFocus="CostInput_TextChanged"/>
         <TextBox x:Name="DescriptionInput" HorizontalAlignment="Left" Margin="93,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"
                  VerticalScrollBarVisibility="Auto"
                  AcceptsReturn="True"

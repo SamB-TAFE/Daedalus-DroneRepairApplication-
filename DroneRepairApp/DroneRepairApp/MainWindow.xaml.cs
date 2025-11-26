@@ -87,17 +87,16 @@ namespace DroneRepairApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CostInput_TextChanged(object sender, TextChangedEventArgs e)
+        private void CostInput_TextChanged(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(CostInput.Text, out double cost))
             {
-                // Format to 2 decimal places
                 CostInput.Text = cost.ToString("F2");
             }
             else if (!string.IsNullOrWhiteSpace(CostInput.Text))
             {
-                // Reject invalid characters by reverting to 0
                 CostInput.Text = "0.00";
+
             }
         }
 
