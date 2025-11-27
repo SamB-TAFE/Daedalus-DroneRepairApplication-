@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -46,7 +47,7 @@ namespace DroneRepairApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                StatusMessage(ex.Message);
                 return;
             }
             try
@@ -55,7 +56,7 @@ namespace DroneRepairApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                StatusMessage(ex.Message);
                 return;
             }
 
@@ -177,7 +178,7 @@ namespace DroneRepairApp
 
             if (index < 0)
             {
-                MessageBox.Show("Please select a finished order to clear.");
+                StatusMessage("Please select a finished order to clear.");
                 return;
             }
 
@@ -221,7 +222,7 @@ namespace DroneRepairApp
             }
             else
             {
-                throw new Exception("Please select an order style\n(Regular or Express)");
+                throw new Exception("Please select an order style. (Regular or Express)");
             }
         }
 
@@ -325,6 +326,13 @@ namespace DroneRepairApp
                 tag = 100;
             }
             TagInput.Text = tag.ToString();
+        }
+
+        private async void StatusMessage(string message)
+        {
+            ErrorStatusText.Text = message;
+            await Task.Delay(3000);
+            ErrorStatusText.Text = "";
         }
     }
 }

@@ -6,8 +6,8 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:DroneRepairApp"
         mc:Ignorable="d"
-        Title="Daedalus -Drone Repair-" Height="673" Width="1018" Icon="/gear.png">
-    <Grid Height="663" VerticalAlignment="Top">
+        Title="Daedalus -Drone Repair-" Height="703" Width="1028" Icon="/gear.png">
+    <Grid Height="703" VerticalAlignment="Top">
         <Border BorderBrush="#FF656565" BorderThickness="1" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="371"/>
 
 
@@ -20,22 +20,17 @@
         <Border BorderBrush="#FF656565" BorderThickness="1" HorizontalAlignment="Left" Height="299" Margin="391,9,0,0" VerticalAlignment="Top" Width="617"/>
 
 
-        <StatusBar Margin="0,630,0,3" RenderTransformOrigin="0.5,0.5">
-            <StatusBar.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </StatusBar.RenderTransform>
+        <StatusBar x:Name="ErrorStatusBar" Margin="0,630,0,0" RenderTransformOrigin="0.5,0.5" FontFamily="Bahnschrift Light SemiCondensed" Background="#FFCECECE" Foreground="#FFE03434" Height="40" VerticalAlignment="Top">
+            <StatusBarItem Height="40" VerticalAlignment="Top" Margin="0,-2,0,0">
+                <TextBlock x:Name="ErrorStatusText" FontSize="16" FontWeight="Bold"/>
+            </StatusBarItem>
         </StatusBar>
 
         <Button x:Name="RegFinishButton" Content="Finish Order" HorizontalAlignment="Left" Margin="909,16,0,0" VerticalAlignment="Top" Height="36" Width="89"
                 Click="FinishRegularOrder"/>
         <Label x:Name="RegQLabel" Content="Regular Queue" HorizontalAlignment="Left" Margin="405,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <ListView x:Name="RegularListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="405,54,20,367"
-                  MouseLeftButtonUp="RegularListView_Click">
+        <ListView x:Name="RegularListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="405,54,0,0"
+                  MouseLeftButtonUp="RegularListView_Click" HorizontalAlignment="Left" Width="593" Height="242" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Tag" Width="50" DisplayMemberBinding="{Binding Tag}" />
@@ -50,8 +45,8 @@
         <Button x:Name="ExpFinishButton" Content="Finish Order" HorizontalAlignment="Left" Margin="909,318,0,0" VerticalAlignment="Top" Height="36" Width="89"
                 Click="FinishExpressOrder"/>
         <Label x:Name="ExpQLabel" Content="Express Queue" HorizontalAlignment="Left" Margin="405,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <ListView x:Name="ExpressListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="405,356,20,49"
-                  MouseLeftButtonUp="ExpressListView_Click">
+        <ListView x:Name="ExpressListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="405,356,0,0"
+                  MouseLeftButtonUp="ExpressListView_Click" HorizontalAlignment="Left" Width="593" Height="258" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Tag" Width="50" DisplayMemberBinding="{Binding Tag}" />
@@ -68,17 +63,17 @@
                      GroupName="ServiceType"/>
         <RadioButton x:Name="ExpOrderRadio" Content="Express Order" HorizontalAlignment="Left" Margin="244,79,0,0" VerticalAlignment="Top"
                      GroupName="ServiceType"/>
-        <TextBox x:Name="ClientInput" HorizontalAlignment="Left" Margin="93,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ClientInput" HorizontalAlignment="Left" Margin="93,70,0,0" TextWrapping="Wrap" Text="Greg" VerticalAlignment="Top" Width="120"/>
         <xctk:IntegerUpDown x:Name="TagInput"
         Minimum="100"
         Maximum="900"
         Increment="10"
-        Value="0"
-        HorizontalContentAlignment="Center" Margin="94,23,805,608"/>
-        <TextBox x:Name="ModelInput" HorizontalAlignment="Left" Margin="93,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="CostInput" HorizontalAlignment="Left" Margin="93,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"
+        Value="100"
+        HorizontalContentAlignment="Center" Margin="94,23,0,0" Text="100" HorizontalAlignment="Left" Width="119" Height="35" VerticalAlignment="Top"/>
+        <TextBox x:Name="ModelInput" HorizontalAlignment="Left" Margin="93,105,0,0" TextWrapping="Wrap" Text="Wheeled" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="CostInput" HorizontalAlignment="Left" Margin="93,138,0,0" TextWrapping="Wrap" Text="120.50" VerticalAlignment="Top" Width="120"
                  LostFocus="CostInput_TextChanged"/>
-        <TextBox x:Name="DescriptionInput" HorizontalAlignment="Left" Margin="93,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"
+        <TextBox x:Name="DescriptionInput" HorizontalAlignment="Left" Margin="93,174,0,0" TextWrapping="Wrap" Text="General Description of problem" VerticalAlignment="Top"
                  VerticalScrollBarVisibility="Auto"
                  AcceptsReturn="True"
                  Width="260" Height="116"/>
@@ -92,8 +87,8 @@
         <Label x:Name="DescriptionLabel" Content="    Repair&#xA;Description" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="58" Width="78" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label x:Name="AddNewLabel" Content="Add New Order" HorizontalAlignment="Left" Margin="279,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="29" Width="100" HorizontalContentAlignment="Right" VerticalContentAlignment="Top"/>
 
-        <ListBox x:Name="FinishedListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="19,381,646,100"
-                 MouseDoubleClick="FinishedListBox_DoubleClick"/>
+        <ListBox x:Name="FinishedListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="19,381,0,0"
+                 MouseDoubleClick="FinishedListBox_DoubleClick" Height="182" VerticalAlignment="Top" HorizontalAlignment="Left" Width="353"/>
         <Label x:Name="FinishedViewLabel" Content="Finished Orders" HorizontalAlignment="Left" Margin="130,340,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.119,0.955" Height="36" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button x:Name="ClearFinishedButton" Content="Pay and Clear" HorizontalAlignment="Left" Margin="151,578,0,0" VerticalAlignment="Top" Height="36" Width="89"
                 Click="ClearFinishedOrder"/>
